@@ -120,13 +120,21 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/*<div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse top-1/4 left-1/4"></div>
           <div className="absolute w-96 h-96 bg-purple-800/20 rounded-full blur-3xl animate-pulse bottom-1/4 right-1/4 animation-delay-2000"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-black"></div>
-        </div>
+        </div>*/}
+
 
         <div className="container mx-auto px-4 relative z-10">
+
+        <div className="unique-middle-wave">
+          <div className="wave wave1"></div>
+          <div className="wave wave2"></div>
+          <div className="wave wave3"></div>
+        </div>
+
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
               Transform Your
@@ -153,6 +161,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* Services Section */}
