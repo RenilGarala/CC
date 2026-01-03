@@ -90,6 +90,8 @@ const Home = () => {
   ];
 
   useEffect(() => {
+    if ("ontouchstart" in window) return;
+
     const handleMouseMove = (e) => {
       if (!glowRef.current) return;
 
@@ -165,10 +167,17 @@ const Home = () => {
       >
         <div
           ref={glowRef}
-          className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] rounded-full opacity-40 blur-[120px]
-             bg-gradient-to-r from-purple-900 to-purple-800
-             transition-transform duration-75
-             -translate-x-1/2 -translate-y-1/2"
+          className="
+    pointer-events-none
+    fixed top-1/2 left-1/2
+    w-[280px] h-[280px] md:w-[400px] md:h-[400px]
+    rounded-full
+    opacity-30 md:opacity-40
+    blur-[90px] md:blur-[120px]
+    bg-gradient-to-r from-purple-900 to-purple-800
+    -translate-x-1/2 -translate-y-1/2
+    transition-transform duration-100
+  "
         />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -406,11 +415,11 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-2xl font-bold mb-4 md:mb-0">
-            <img
-              src="/src/assets/RD-2.png"
-              alt="ClutchCoders logo"
-              className="w-10 h-10 object-contain"
-            />
+              <img
+                src="/src/assets/RD-2.png"
+                alt="ClutchCoders logo"
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <div className="text-gray-400 text-center md:text-left">
               © 2024 Clutch Coders. All rights reserved.
