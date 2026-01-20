@@ -115,7 +115,7 @@ const Home = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className=" text-2xl font-bold">
             <img
-              src="/src/assets/RD-2.png"
+              src={logo}
               alt="ClutchCoders logo"
               className="w-14 h-14 object-contain"
             />
