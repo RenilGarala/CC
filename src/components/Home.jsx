@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import logo from "../assets/RD-2.png";
 import {
   Menu,
   X,
@@ -114,7 +115,7 @@ const Home = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className=" text-2xl font-bold">
             <img
-              src="/public/RD-2.png"
+              src="/src/assets/RD-2.png"
               alt="ClutchCoders logo"
               className="w-14 h-14 object-contain"
             />
