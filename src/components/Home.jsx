@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/RD-2.png";
+import maktrix from "../assets/matrix.png";
+import nova from "../assets/nova.png";
+import academy from "../assets/academy.png";
+import dudz from "../assets/dudz.png";
+
 import {
   Menu,
   X,
@@ -65,28 +70,20 @@ const Home = () => {
 
   const works = [
     {
-      title: "E-Commerce Platform",
-      category: "Web Development",
-      image:
-        "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+      image: maktrix,
+      link: "https://matrixjvc.com",
     },
     {
-      title: "Finance Mobile App",
-      category: "Mobile Development",
-      image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
+      image: nova,
+      link: "https://www.novaasolution.com/",
     },
     {
-      title: "Healthcare Dashboard",
-      category: "UI/UX Design",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+      image: academy,
+      link: "https://yiitacademy.vercel.app/",
     },
     {
-      title: "CRM System",
-      category: "Software Solutions",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      image:dudz,
+      link: "https://dudz-agency.onrender.com",
     },
   ];
 
@@ -105,11 +102,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-neutral-950 text-white min-h-screen">
       {/* Navigation */}
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-black/95 backdrop-blur-sm py-4" : "bg-transparent py-6"
+          scrolled
+            ? "bg-neutral-950 backdrop-blur-sm py-4"
+            : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
@@ -270,13 +269,14 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
                   <div className="absolute bottom-0 left-0 p-6">
-                    <span className="text-purple-400 text-sm font-semibold">
-                      {work.category}
-                    </span>
-                    <h3 className="text-2xl font-bold mt-2">{work.title}</h3>
-                    <button className="mt-4 flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                    <a
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
                       View Project <ChevronRight size={20} className="ml-1" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -358,14 +358,14 @@ const Home = () => {
                   <Mail className="text-purple-500 mt-1" size={24} />
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-gray-400">info@clutchcoders.com</div>
+                    <div className="text-gray-400">clutchcoders@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="text-purple-500 mt-1" size={24} />
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-gray-400">+1 (555) 123-4567</div>
+                    <div className="text-gray-400">+91 9898743932</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -373,7 +373,7 @@ const Home = () => {
                   <div>
                     <div className="font-semibold">Address</div>
                     <div className="text-gray-400">
-                      123 Tech Street, Silicon Valley, CA 94025
+                      Surat-395010, Gujarat, India
                     </div>
                   </div>
                 </div>
@@ -417,7 +417,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-2xl font-bold mb-4 md:mb-0">
               <img
-                src="/src/assets/RD-2.png"
+                src={logo}
                 alt="ClutchCoders logo"
                 className="w-10 h-10 object-contain"
               />
@@ -439,10 +439,10 @@ const Home = () => {
                 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/clutchcoders/"
                 className="text-gray-400 hover:text-purple-500 transition-colors"
               >
-                GitHub
+                Instagram
               </a>
             </div>
           </div>
