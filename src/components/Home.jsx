@@ -4,6 +4,7 @@ import maktrix from "../assets/matrix.png";
 import nova from "../assets/nova.png";
 import academy from "../assets/academy.png";
 import dudz from "../assets/dudz.png";
+import Majestic from "../assets/Majestic.png";
 
 import {
   Menu,
@@ -85,6 +86,10 @@ const Home = () => {
       image:dudz,
       link: "https://dudz-agency.onrender.com",
     },
+    {
+      image: Majestic,
+      link: "https://www.majesticcaretech.com",
+    }
   ];
 
   useEffect(() => {
@@ -243,47 +248,62 @@ const Home = () => {
 
       {/* Works Section */}
       <section
-        id="works"
-        className="py-20 bg-gradient-to-b from-black to-purple-900/10"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-purple-500">Portfolio</span>
-            </h2>
-            <p className="text-gray-400 text-lg">
-              Showcasing our latest projects and innovations
-            </p>
-          </div>
+  id="works"
+  className="py-20 bg-gradient-to-b from-black to-purple-900/10"
+>
+  <div className="container mx-auto px-6">
+    
+    {/* Heading Section */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        Our <span className="text-purple-500">Portfolio</span>
+      </h2>
+      <p className="text-gray-400 text-lg">
+        Showcasing our latest projects and innovations
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {works.map((work, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer"
-              >
-                <img
-                  src={work.image}
-                  alt={work.title}
-                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <a
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                    >
-                      View Project <ChevronRight size={20} className="ml-1" />
-                    </a>
-                  </div>
-                </div>
+    {/* Horizontal Scroll Projects */}
+    <div className="overflow-x-auto">
+      <div className="flex gap-8 w-max snap-x snap-mandatory">
+        {works.map((work, index) => (
+          <div
+            key={index}
+            className="group relative overflow-hidden w-96 rounded-2xl cursor-pointer 
+                       flex-shrink-0r snap-start"
+          >
+            <img
+              src={work.image}
+              alt={work.title}
+              className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-white text-xl font-semibold">
+                  {work.title}
+                </h3>
+
+                <a
+                  href={work.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                >
+                  View Project →
+                </a>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
       {/* About Section */}
       <section id="about" className="py-20">
